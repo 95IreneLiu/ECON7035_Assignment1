@@ -23,4 +23,6 @@ if __name__ == '__main__':
 
     cleaned = clean(args.input)
     cleaned.to_csv(args.output, index=False)
+    output_file = pd.read_csv(args.output)
+    print(output_file.shape)
 
